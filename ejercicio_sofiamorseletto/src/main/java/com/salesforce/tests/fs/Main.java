@@ -18,6 +18,9 @@ public class Main {
         String tokens[] = scanner.nextLine().split(" ");
         while (!tokens[0].equals(quit)) {
             String parameter = tokens.length > 1 ? tokens[1] : "";
+            if(parameter.equals("-r")){
+                commands.get(("pwd")).execute(actualComponent, parameter);
+            }
             actualComponent = commands.get(tokens[0]).execute(actualComponent, parameter);
             tokens = scanner.nextLine().split(" ");
         }
