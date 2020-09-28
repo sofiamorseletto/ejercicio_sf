@@ -36,6 +36,9 @@ public class Directory implements Component{
     }
 
     public Component goToChild(String name) throws DirectoryNotFoundException{
+        if (name.equals("")){
+            return this;
+        }
         if(!children.containsKey(name)){
             throw new DirectoryNotFoundException();
         }
