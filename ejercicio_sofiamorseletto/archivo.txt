@@ -1,0 +1,6 @@
+mkdir hola
+cd hola
+mkdir hola1
+mkdir hola2
+cd hola1
+mkdir hola3
